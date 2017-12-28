@@ -17,3 +17,8 @@ app.on('ready', function(){
         slashes:true
     }));
 });
+
+exports.openWindow = (filename) => {
+    let win = new BrowserWindow({frame:false, fullscreen:true});
+    win.loadURL(`file://${__dirname}/` + filename+ `.html`)
+}
