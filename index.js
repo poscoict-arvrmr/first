@@ -9,13 +9,14 @@ let mainWindow;
 // Listen for app to be ready
 app.on('ready', function(){
     //Create new window
-    mainWindow = new BrowserWindow({frame:false, fullscreen:true});
+    mainWindow = new BrowserWindow({width: 800, height: 600}); //{frame:false, fullscreen:true}
     //Load html into window
     mainWindow.loadURL(url.format({
         pathname: path.join(__dirname, 'mainWindow.html'),
         protocol:'file:',
         slashes:true
     }));
+    mainWindow.webContents.openDevTools(); // 크롬브라우저의 개발자도구 실행시킴.
 });
 
 exports.openWindow = (filename) => {

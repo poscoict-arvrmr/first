@@ -3,22 +3,35 @@
     <head>
         <title>AR/VR First App</title>
         <link rel="stylesheet" type="text/css" href="stylesheet.css">
+        <script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
+        <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.34/browser.min.js"></script>
     </head>
     <body>
-        
-        <div>
-            <div class="homeBtn" id="MyApps">
-                <h2>My Apps</h2>
-            </div>
-            <div class="homeBtn" id="MyCamera">
-                <h2>My Camera</h2>
-            </div>
-            <div class="homeBtn" id="MyFiles">
-                <h2>My Files</h2>
-            </div>
-        </div>
-
+        <div id="main">나와라.. </div>
         <a id="close" href="javascript:window.close()">Close</a>
+        <script type="text/babel">
+const React = require('react');
+const ReactDOM = require('react-dom');
+
+ReactDOM.render(
+    <div>
+        <div className="homeBtn" id="MyApps">
+            <h2>My Apps</h2>
+        </div>
+        <div className="homeBtn" id="MyCamera">
+            <h2>My Camera</h2>
+        </div>
+        <div className="homeBtn" id="MyFiles">
+            <h2>My Files</h2>
+        </div>
+    </div>
+    , 
+    document.getElementById('main')
+);
+        </script>
+        <!-- 이건 나중에 react 로 바꿔야 할듯. 
         <script src="changePages.js"></script>
+        -->
     </body>
 </html>
