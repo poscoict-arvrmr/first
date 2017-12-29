@@ -16,15 +16,3 @@ myapps.addEventListener('click', () => {
     window.close()
     document.body.appendChild(myapps)
 }, false)
-
-
-/**not working -- deleted 'backToMain' from html files
-var mainWin = document.getElementById('backToMain')
-mainWin.addEventListener('click', () => {
-    var window = remote.getCurrentWindow()
-    main.openWindow('mainWindow')
-    window.close()
-    document.body.appendChild(mainWin)
-}, false)
-**/
-
